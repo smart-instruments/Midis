@@ -12,6 +12,6 @@ config.dbName = process.env.dbName || 'midis';
 config.dbStat = process.env.dbStat || 'remote';
 config.dbUserName = process.env.dbUserName || 'smartinstruments';
 config.dbPassword = process.env.dbPassword || 'smartinstruments1dc';
-config.serverPort = process.env.serverPort || 5000;
+config.serverPort = process.env.PORT || 5000;
 
 export default config;
