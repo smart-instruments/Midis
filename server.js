@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan('dev', { stream: logger.stream }));
 
-app.use('/midis', midis);
+app.use(midis);
 
 // Index route
 app.get('/', (req, res) => {
