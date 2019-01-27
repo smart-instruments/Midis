@@ -6,6 +6,7 @@ import logger from './core/logger/app-logger';
 
 import config from './core/config/config.dev';
 import midis from './routes/midis.route';
+import spotifyRoutes from './routes/spotify.route';
 import connectToDb from './db/connect';
 
 const port = config.serverPort;
@@ -24,6 +25,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan('dev', { stream: logger.stream }));
 
 app.use(midis);
+app.use(spotifyRoutes);
 
 // Index route
 app.get('/', (req, res) => {
