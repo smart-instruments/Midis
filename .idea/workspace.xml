@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2f502c6-9974-4f21-a34e-07a100ec22f9" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/controllers/spotifyUserController.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/models/spotifyUser.model.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/routes/spotify.route.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/services/httpRequestService.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/core/config/config.dev.js" afterPath="$PROJECT_DIR$/core/config/config.dev.js" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -48,7 +41,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="midiController.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="midiController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/midiController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="362">
@@ -68,6 +61,16 @@
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.dev.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/core/config/config.dev.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="43" lean-forward="true" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -129,10 +132,10 @@
         <option value="$PROJECT_DIR$/services/httpRequestService.js" />
         <option value="$PROJECT_DIR$/dist/routes/midi.route.js" />
         <option value="$PROJECT_DIR$/routes/spotify.route.js" />
-        <option value="$PROJECT_DIR$/core/config/config.dev.js" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/models/spotifyUser.model.js" />
         <option value="$PROJECT_DIR$/controllers/spotifyUserController.js" />
+        <option value="$PROJECT_DIR$/core/config/config.dev.js" />
       </list>
     </option>
   </component>
@@ -217,11 +220,6 @@
             <path>
               <item name="nodeEs6BasicServer" type="b2602c69:ProjectViewProjectNode" />
               <item name="nodeEs6BasicServer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nodeEs6BasicServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nodeEs6BasicServer" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nodeEs6BasicServer" type="b2602c69:ProjectViewProjectNode" />
@@ -424,7 +422,7 @@
       <workItem from="1546497306211" duration="599000" />
       <workItem from="1547559061951" duration="2648000" />
       <workItem from="1548163779442" duration="1716000" />
-      <workItem from="1548602049156" duration="1715000" />
+      <workItem from="1548602049156" duration="1782000" />
     </task>
     <task id="LOCAL-00001" summary="Fix Routing">
       <created>1546429805490</created>
@@ -461,11 +459,18 @@
       <option name="project" value="LOCAL" />
       <updated>1546439323988</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Adding Spotify user saving">
+      <created>1548603796109</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1548603796109</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34476000" />
+    <option name="totallyTimeSpent" value="34543000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="0" width="1920" height="1080" extended-state="0" />
@@ -501,7 +506,8 @@
     <MESSAGE value="Fix Routing" />
     <MESSAGE value="Using env.PORT" />
     <MESSAGE value="Validating API's fir midi&#10; - GET&#10; - POST&#10; - PUT - analysis event" />
-    <option name="LAST_COMMIT_MESSAGE" value="Validating API's fir midi&#10; - GET&#10; - POST&#10; - PUT - analysis event" />
+    <MESSAGE value="Adding Spotify user saving" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding Spotify user saving" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -948,14 +954,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/config/config.dev.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="58" lean-forward="false" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/spotify.route.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1013,6 +1011,14 @@
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/config/config.dev.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="43" lean-forward="true" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
