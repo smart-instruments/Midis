@@ -18,7 +18,7 @@ controller.addSpotifyUser = async (req, res) => {
     spotifyUser.lastUpdate = Date.now();
 
     const savedUser = await spotifyUserModel.addSpotifyUser(spotifyUser);
-    logger.info('[spotifyUserController.addSpotifyUser] - Adding midi', doc);
+    logger.info('[spotifyUserController.addSpotifyUser] - Adding Spotify user', doc);
 
     return res.status(200).send(JSON.stringify(savedUser));
   } catch (err) {
