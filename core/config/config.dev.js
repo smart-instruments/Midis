@@ -11,7 +11,13 @@ config.remoteDbPort = process.env.remoteDbPort || '45484';
 config.dbName = process.env.dbName || 'midis';
 config.dbStat = process.env.dbStat || 'remote';
 config.dbUserName = process.env.dbUserName || 'smartinstruments';
-config.dbPassword = process.env.dbPassword; // || 'smartinstruments1dc';
+config.dbPassword = process.env.dbPassword;
 config.serverPort = process.env.PORT || 5000;
+
+config.spotifyUsersDb = process.env.spotifyUsersDb || 'spotify_users';
+config.remoteSpotifyUsersHost = process.env.remoteSpotifyUsersHost || 'ds113915.mlab.com';
+config.remoteSpotifyUsersHostPort = process.env.remoteSpotifyUsersHostPort || '13915';
+config.spotifyDbName = process.env.spotifyDbName || 'spotify_users';
+config.spotifyDbPassword = process.env.spotifyDbPassword;
 
 export default config;
