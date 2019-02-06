@@ -6,6 +6,20 @@ const SpotifyUserSchema = mongoose.Schema({
   lastUpdate: { type: Date },
   userId: { type: String },
   genres: [],
+  audioFeatures: [
+    {
+      acousticness: { type: Number },
+      danceability: { type: Number },
+      duration_ms: { type: Number },
+      energy: { type: Number },
+      id: { type: String },
+      liveness: { type: Number },
+      loudness: { type: Number },
+      mode: { type: Number },
+      tempo: { type: Number },
+      valence: { type: Number },
+    },
+  ],
 }, { collection: 'SpotifyUsers' });
 
 const SpotifyUserModel = mongoose.model('SpotifyUserModel', SpotifyUserSchema);
