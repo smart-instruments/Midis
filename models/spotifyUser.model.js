@@ -6,7 +6,7 @@ const SpotifyUserSchema = mongoose.Schema({
   lastUpdate: { type: Date },
   userId: { type: String },
   genres: [],
-  audioFeatures: [
+  topTracks: [
     {
       acousticness: { type: Number },
       danceability: { type: Number },
