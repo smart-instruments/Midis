@@ -32,8 +32,8 @@
       <file leaf-file-name="spotifyUser.model.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/spotifyUser.model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+            <state relative-caret-position="540">
+              <caret line="36" column="6" lean-forward="true" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -475,11 +475,18 @@
       <option name="project" value="LOCAL" />
       <updated>1549465091113</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Changing Spotify user model - Adding audio features recent tracks">
+      <created>1549524358018</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1549524358018</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29365000" />
+    <option name="totallyTimeSpent" value="30097000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -526,7 +533,8 @@
     <MESSAGE value="Fix Routing" />
     <MESSAGE value="Using env.PORT" />
     <MESSAGE value="Changing Spotify user model - Adding audio features" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changing Spotify user model - Adding audio features" />
+    <MESSAGE value="Changing Spotify user model - Adding audio features recent tracks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changing Spotify user model - Adding audio features recent tracks" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1029,8 +1037,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/spotifyUser.model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+        <state relative-caret-position="540">
+          <caret line="36" column="6" lean-forward="true" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
