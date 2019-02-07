@@ -18,6 +18,7 @@ const SpotifyUserSchema = mongoose.Schema({
       mode: { type: Number },
       tempo: { type: Number },
       valence: { type: Number },
+      _id: false,
     },
   ],
   recentTracks: [
@@ -32,6 +33,7 @@ const SpotifyUserSchema = mongoose.Schema({
       mode: { type: Number },
       tempo: { type: Number },
       valence: { type: Number },
+      _id: false,
     },
   ],
 }, { collection: 'SpotifyUsers' });
