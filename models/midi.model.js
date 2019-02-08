@@ -3,9 +3,23 @@ import mongoose from 'mongoose';
 
 const MidiSchema = mongoose.Schema({
   created: { type: Date },
-  midiEvent: { type: String },
   lastUpdate: { type: Date },
-  analysis: [],
+  sessionId: { type: String },
+  analysis: [
+    {
+      midiEvent: {
+        key1: String,
+        key2: String,
+        key3: String,
+      },
+      key1: String,
+      key2: String,
+      key3: String,
+      key4: String,
+      key5: String,
+      _id: false,
+    },
+  ],
 }, { collection: 'Midis' });
 
 const MidiModel = mongoose.model('Midis', MidiSchema);
