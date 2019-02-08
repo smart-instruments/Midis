@@ -165,8 +165,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1680" />
-    <option name="height" value="1050" />
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -261,21 +261,22 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
-    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
-    <property name="javascript.nodejs.core.library.configured.version" value="6.2.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/local/bin/node" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="node.js.path.for.package.standard" value="project" />
-    <property name="node.js.detected.package.standard" value="true" />
-    <property name="node.js.selected.package.standard" value="" />
-    <property name="restartRequiresConfirmation" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/node_modules/mkdirp/index.js" />
+    <property name="javascript.nodejs.core.library.configured.version" value="11.8.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/local/bin/node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -290,18 +291,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Node.js.debug">
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-js-file="$PROJECT_DIR$/server.js" />
-    <configuration name="debug" type="NodeJSConfigurationType" factoryName="Node.js" application-parameters="node --inspect" path-to-node="$PROJECT_DIR$/node_modules/.bin/babel-node" node-parameters="--preset=babel-preset-es2015 " path-to-js-file="server.js" working-dir="$PROJECT_DIR$">
-      <envs>
-        <env name="preset" value="babel-preset-es2015" />
-        <env name="dbPassword" value="smartinstruments1dc" />
-      </envs>
-    </configuration>
-    <configuration name="localdev" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="$PROJECT_DIR$/node_modules/.bin/babel-node" node-parameters="--preset=babel-preset-es2015" path-to-js-file="server.js" working-dir="$PROJECT_DIR$">
-      <envs>
-        <env name="preset" value="babel-preset-es2015" />
-      </envs>
-    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -388,7 +377,23 @@
       <predefined_log_file id="idea.log" enabled="true" />
       <method />
     </configuration>
-    <configuration name="start" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+    <configuration default="true" type="NodeJSConfigurationType" path-to-js-file="$PROJECT_DIR$/server.js">
+      <method v="2" />
+    </configuration>
+    <configuration name="debug" type="NodeJSConfigurationType" application-parameters="node --inspect" path-to-node="$PROJECT_DIR$/node_modules/.bin/babel-node" node-parameters="--preset=babel-preset-es2015 " path-to-js-file="server.js" working-dir="$PROJECT_DIR$">
+      <envs>
+        <env name="preset" value="babel-preset-es2015" />
+        <env name="dbPassword" value="smartinstruments1dc" />
+      </envs>
+      <method v="2" />
+    </configuration>
+    <configuration name="localdev" type="NodeJSConfigurationType" path-to-node="$PROJECT_DIR$/node_modules/.bin/babel-node" node-parameters="--preset=babel-preset-es2015" path-to-js-file="server.js" working-dir="$PROJECT_DIR$">
+      <envs>
+        <env name="preset" value="babel-preset-es2015" />
+      </envs>
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
@@ -396,20 +401,18 @@
       </scripts>
       <node-interpreter value="project" />
       <envs />
+      <method v="2" />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Node.js.localdev" />
-      <item index="1" class="java.lang.String" itemvalue="Node.js.debug" />
-      <item index="2" class="java.lang.String" itemvalue="npm.start" />
+    <list>
+      <item itemvalue="Node.js.localdev" />
+      <item itemvalue="Node.js.debug" />
+      <item itemvalue="npm.start" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="npm.start" />
+      <list>
+        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration>$USER_HOME$/.subversion</configuration>
