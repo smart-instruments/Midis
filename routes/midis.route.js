@@ -12,7 +12,7 @@ router.post('/midis', (req, res) => {
 });
 
 router.put('/midis/addAnalysisEvent/:id([0-9a-f]{24})', (req, res) => {
-  midiController.addAnalysisEvent(req, res);
+  midiController.addAnalysisEvents(req, res);
 });
 
 // router.put('/midi', (req, res) => {
