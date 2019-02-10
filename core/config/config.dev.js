@@ -1,4 +1,4 @@
-timport path from 'path';
+import path from 'path';
 
 const config = {};
 
