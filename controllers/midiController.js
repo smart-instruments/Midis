@@ -21,9 +21,9 @@ controller.getMidi = async (req, res) => {
   }
 };
 
-controller.addAnalysisEvent = async (req, res) => {
+controller.addAnalysisEvents = async (req, res) => {
   const id = req.param('id');
-  const event = req.body;
+  const events = req.body.events;
 
   if (!id) {
     logger.warn('[midiController.addAnalysisEvent] - No id was sent (id)', id);
@@ -35,7 +35,7 @@ controller.addAnalysisEvent = async (req, res) => {
     logger.info('[midiController.addAnalysisEvent] - Getting midi (id) =>', id);
     const midiDocument = await midiModel.getMidi(id);
     const newMidiDocument = createMidiDocument(midiDocument);
-    newMidiDocument.analysis.push(event);
+    newMidiDocument.analysis = newMidiDocument.analysis.concat(events);
 
     logger.info('[midiController.addAnalysisEvent] - Updating midi (id, document) =>', id, JSON.stringify(newMidiDocument));
 
@@ -55,7 +55,7 @@ const createMidiDocument = (midi) => {
     created: midi.created,
     lastUpdate: Date.now(),
     analysis: midi.analysis,
-    midiEvent: midi.midiEvent,
+    sessionId: midi.sessionId,
   };
 };
 
