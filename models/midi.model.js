@@ -8,7 +8,7 @@ const MidiSchema = mongoose.Schema({
   analysis: [
     {
       _id: false,
-      note: {
+      midiCommand: {
         command: { type: Number },
         param1: { type: Number },
         param2: { type: Number },
