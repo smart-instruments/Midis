@@ -6,11 +6,11 @@ config.logFileDir = path.join(__dirname, '../../log');
 config.logFileName = 'app.log';
 config.dbHost = process.env.dbHost || 'localhost';
 config.dbPort = process.env.dbPort || '27017';
-config.remoteDbHost = process.env.remoteDbHost || 'ds145484.mlab.com';
-config.remoteDbPort = process.env.remoteDbPort || '45484';
+config.remoteDbHost = process.env.remoteDbHost || 'mongodb-smart-instruments.westeurope.cloudapp.azure.com';
+config.remoteDbPort = process.env.remoteDbPort || '27017';
 config.dbName = process.env.dbName || 'midis';
-config.dbStat = process.env.dbStat || 'local'; // "remote"
-config.dbUserName = process.env.dbUserName || 'smartinstruments';
+config.dbStat = process.env.dbStat || 'remote'; // "local"
+config.dbUserName = process.env.dbUserName || 'smartinstruments_dev';
 config.dbPassword = process.env.dbPassword;
 config.serverPort = process.env.PORT || 5000;
 
