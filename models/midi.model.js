@@ -58,11 +58,11 @@ const MidiSchema = mongoose.Schema({
       },
       repetitions: {
         longest_sequence_appeared_more_than_once: [],
-        longest_sequence_appeared_more_than_once_last_x: { type: Number },
+        longest_sequence_appeared_more_than_once_last_x: [],
         amount_of_times_that_the_longest_sequence_of_notes_that_appeared_for_the_last_X_notes: { type: Number },
         amount_of_times_that_the_longest_sequence_of_notes_that_appeared_for_entire_piece: { type: Number },
         longest_sequence_appeared_counter: [],
-        longest_sequence_appeared_counter_last_x: { type: Number },
+        longest_sequence_appeared_counter_last_x: [],
         amount_of_times_longest_sequence_of_notes_duration_differences_appeared_for_the_entire_piece: { type: Number },
         amount_of_times_longest_sequence_of_notes_duration_differences_appeared_last_X_notes: { type: Number },
       },
