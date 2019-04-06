@@ -10,7 +10,7 @@ config.remoteDbHost = process.env.remoteDbHost || 'mongodb-smart-instruments.wes
 config.remoteDbPort = process.env.remoteDbPort || '27017';
 config.dbName = process.env.dbName || 'midis';
 config.dbStat = process.env.dbStat || 'remote'; // "local"
-config.dbUserName = process.env.dbUserName || 'smartinstruments_dev';
+config.dbUserName = process.env.dbUserName || 'smart';
 config.dbPassword = process.env.dbPassword;
 config.serverPort = process.env.PORT || 5000;
 
