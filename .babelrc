@@ -1,9 +1,6 @@
 {
   "passPerPreset": true,
-  "presets": [
-    "es2015",
-    "stage-0"
-  ],
+  "presets": ["babel-preset-es2015", "babel-preset-es2016", "babel-preset-es2017"],
   "plugins": [
     "babel-plugin-inline-import",
     "transform-runtime"
