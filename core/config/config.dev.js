@@ -22,6 +22,7 @@ config.spotifyDbName = process.env.spotifyDbName || 'spotify_users';
 config.spotifyDbPassword = process.env.spotifyDbPassword;
 
 config.classifyServerUri = 'https://smart-instruments-class.herokuapp.com/';
-config.classifyApiPathRegularFields = 'classification/';
+config.classifyApiPath = 'classification/';
+config.classifyApiPathRegularFields = 'classification_text_fields/';
 
 export default config;

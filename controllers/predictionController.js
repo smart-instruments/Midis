@@ -46,7 +46,7 @@ controller.getController = async (req, res) => {
 controller.getSizesClassification = async (body) => {
   try {
     logger.info('[predictionController.getSizesClassification] - requesting classifications for (user) => ', JSON.stringify(body));
-    const classifications = await request('POST', config.classifyServerUri + config.classifyApiPathRegularFields, body);
+    const classifications = await request('POST', config.classifyServerUri + config.classifyApiPath, body);
 
     logger.info('[predictionController.getSizesClassification] - classifications for (user) done => ', JSON.stringify(classifications));
 
