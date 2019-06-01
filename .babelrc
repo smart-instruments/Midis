@@ -2,8 +2,8 @@
   "passPerPreset": true,
   "presets": [
     "react",
-    "stage-0",
-    "env"
+    "es2015",
+    "stage-0"
   ],
   "plugins": [
     "babel-plugin-inline-import",
