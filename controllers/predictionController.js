@@ -53,7 +53,7 @@ controller.getSizesClassification = async (body) => {
     return classifications;
   } catch (err) {
     logger.error('[predictionController.getSizesClassification] - Error while getting classification (err)', err);
-    throw err;
+    throw new Error(err);
   }
 };
 
