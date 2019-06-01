@@ -22,7 +22,6 @@
   ],
   "author": "Tom Yitav <tomyitav@gmail.com>",
   "dependencies": {
-    "babel-polyfill": "^6.0.16",
     "@babel/core": "^7.2.2",
     "@babel/register": "^7.0.0",
     "babel-cli": "6.16.0",
