@@ -77,7 +77,7 @@ controller.getUserClassification = async (req, res) => {
 
     return res.status(200).send(JSON.stringify(response));
   } catch (err) {
-    logger.error('[predictionController.getUserClassification] - Error while getting classification (err)', err);
+    logger.error('[predictionController.getUserClassification] - Error while getting classification - (err)', err);
     return res.status(500).send('Error while getting classification');
   }
 };
