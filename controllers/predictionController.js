@@ -1,16 +1,37 @@
+import rp from 'request-promise';
 import controllerModel from '../models/controllerModel';
 import ribaSetupModel from '../models/ribaSetupModel';
+import userModel from '../models/user.model';
 import logger from '../core/logger/app-logger';
+import config from '../core/config/config.dev';
 
 const controller = {};
 
-controller.getController = async (req, res) => {
-  // const id = req.param('id');
-  // if (!id) {
-  //   logger.warn('[controllerController.getController] - No id was sent (id)', id);
-  //   return res.status(500).send('Error Getting document');
-  // }
 
+function request(method, uri, body) {
+  const options = {
+    method,
+    uri,
+    body,
+    json: true,
+  };
+
+  logger.info(options);
+  return rp(options);
+}
+
+function extractFieldsForPrediction(user) {
+  return {
+    size_genres: user.genres.length,
+    size_equipment: user.equipment.length,
+    size_influences: user.influences.length,
+    size_instruments: user.instruments.length,
+    size_languages: user.languages.length,
+    freeText: user.musicalBackground.descripion,
+  };
+}
+
+controller.getController = async (req, res) => {
   try {
     const clr = await controllerModel.getController();
     logger.debug('[predictionController.getController] - Getting controller ');
@@ -19,6 +40,45 @@ controller.getController = async (req, res) => {
   } catch (err) {
     logger.error('[predictionController.getController] - Error while getting controller (err)', err);
     return res.status(500).send('Error while getting controller');
+  }
+};
+
+controller.getSizesClassification = async (body) => {
+  try {
+    logger.info('[predictionController.getSizesClassification] - requesting classifications for (user) => ', JSON.stringify(body));
+    const classifications = await request('POST', config.classifyServerUri + config.classifyApiPathRegularFields, body);
+
+    logger.info('[predictionController.getSizesClassification] - classifications for (user) done => ', JSON.stringify(classifications));
+
+    return classifications;
+  } catch (err) {
+    logger.error('[predictionController.getSizesClassification] - Error while getting classification (err)', err);
+    throw err;
+  }
+};
+
+controller.getUserClassification = async (req, res) => {
+  const id = req.param('id');
+  try {
+    logger.info('[predictionController.getUserClassification] - requesting classifications for (user) => ', id);
+    const user = await userModel.getUser(id);
+    logger.info('[predictionController.getUserClassification] - requesting user data for (user data) => ', JSON.stringify(user));
+
+    const data = extractFieldsForPrediction(user);
+    logger.info('[predictionController.getUserClassification] - requesting user data for (extracted user data) => ', JSON.stringify(data));
+
+    const classifications = await controller.getSizesClassification(data);
+
+    logger.info('[predictionController.getUserClassification] - classifications for (user, classification) done => ', id, JSON.stringify(classifications));
+
+    const response = {
+      regularFields: classifications,
+    };
+
+    return res.status(200).send(JSON.stringify(response));
+  } catch (err) {
+    logger.error('[predictionController.getUserClassification] - Error while getting classification (err)', err);
+    return res.status(500).send('Error while getting classification');
   }
 };
 
@@ -50,4 +110,3 @@ function mapControllerIdForModel(controllerId) {
 }
 
 export default controller;
-

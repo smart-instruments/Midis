@@ -11,5 +11,9 @@ router.post('/prediction/setup/:controllerId([0-9a-f]{24})', (req, res) => {
   predictionController.getSetup(req, res);
 });
 
+router.get('/prediction/:id([0-9a-f]{24})', (req, res) => {
+  predictionController.getUserClassification(req, res);
+});
+
 
 export default router;
