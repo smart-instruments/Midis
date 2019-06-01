@@ -1,12 +1,16 @@
 import rp from 'request-promise';
 
 class HttpRequestService {
-    /**
-     * Getter secret token.
-     *
-     * @returns {string}
-     */
-  _request(method, uri, body) {
+  init(args) {
+    super.init(args);
+  }
+
+  /**
+   * Getter secret token.
+   *
+   * @returns {string}
+   */
+  request(method, uri, body) {
     const options = {
       method,
       uri,
@@ -18,11 +22,11 @@ class HttpRequestService {
   }
 
   get(uri, body) {
-    return this._request('GET', uri, body);
+    return request('GET', uri, body);
   }
 
   post(uri, body) {
-    return _request('POST', uri, body);
+    return request('POST', uri, body);
   }
 
   postFile(uri, file) {
