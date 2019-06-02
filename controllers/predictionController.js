@@ -80,6 +80,9 @@ controller.getUserClassification = async (req, res) => {
       },
       freeText: {
         rythem: classifications.rythemFreeText,
+        melody: classifications.melodyFreeText,
+        harmony: classifications.harmonyFreeText,
+        sophisticationLevel: classifications.sophisticationLevelFreeText,
       },
     };
 
