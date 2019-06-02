@@ -21,7 +21,7 @@ config.remoteSpotifyUsersHostPort = process.env.remoteSpotifyUsersHostPort || '1
 config.spotifyDbName = process.env.spotifyDbName || 'spotify_users';
 config.spotifyDbPassword = process.env.spotifyDbPassword;
 
-config.classifyServerUri = 'https://smart-instruments-class.herokuapp.com/';
+config.classifyServerUri = 'https://smart-instruments-class.herokuapp.com/'; // 'http://localhost:9990/'
 config.classifyApiPath = 'classification/';
 config.classifyApiPathRegularFields = 'classification_text_fields/';
 

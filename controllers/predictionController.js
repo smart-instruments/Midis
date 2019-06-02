@@ -27,7 +27,7 @@ function extractFieldsForPrediction(user) {
     size_influences: user.influences.length,
     size_instruments: user.instruments.length,
     size_languages: user.languages.length,
-    freeText: user.musicalBackground.descripion,
+    description: user.musicalBackground.descripion,
   };
 }
 
@@ -72,7 +72,15 @@ controller.getUserClassification = async (req, res) => {
     logger.info('[predictionController.getUserClassification] - classifications for (user, classification) done => ', id, JSON.stringify(classifications));
 
     const response = {
-      regularFields: classifications,
+      regularFields: {
+        harmony: classifications.harmony,
+        melody: classifications.melody,
+        rythem: classifications.rythem,
+        sophisticationLevel: classifications.sophisticationLevel,
+      },
+      freeText: {
+        rythem: classifications.rythemFreeText,
+      },
     };
 
     return res.status(200).send(JSON.stringify(response));
