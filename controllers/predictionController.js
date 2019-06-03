@@ -27,9 +27,11 @@ function extractFieldsForPrediction(user) {
     size_influences: user.influences.length,
     size_instruments: user.instruments.length,
     size_languages: user.languages.length,
-    description: user.musicalBackground.descripion,
+    description: user.musicalBackground.descripion || '',
   };
 }
+
+// function _map
 
 controller.getController = async (req, res) => {
   try {
@@ -71,22 +73,7 @@ controller.getUserClassification = async (req, res) => {
 
     logger.info('[predictionController.getUserClassification] - classifications for (user, classification) done => ', id, JSON.stringify(classifications));
 
-    const response = {
-      regularFields: {
-        harmony: classifications.harmony,
-        melody: classifications.melody,
-        rythem: classifications.rythem,
-        sophisticationLevel: classifications.sophisticationLevel,
-      },
-      freeText: {
-        rythem: classifications.rythemFreeText,
-        melody: classifications.melodyFreeText,
-        harmony: classifications.harmonyFreeText,
-        sophisticationLevel: classifications.sophisticationLevelFreeText,
-      },
-    };
-
-    return res.status(200).send(JSON.stringify(response));
+    return res.status(200).send(JSON.stringify(classifications));
   } catch (err) {
     logger.error('[predictionController.getUserClassification] - Error while getting classification - (err)', err);
     return res.status(500).send('Error while getting classification');
