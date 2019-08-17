@@ -9,7 +9,7 @@ config.dbPort = process.env.dbPort || '27017';
 config.remoteDbHost = process.env.remoteDbHost || 'ds145484.mlab.com';
 config.remoteDbPort = process.env.remoteDbPort || '45484';
 config.dbName = process.env.dbName || 'midis';
-config.dbStat = process.env.dbStat || 'remote'; // "local"
+config.dbStat = process.env.dbStat || 'local'; // "remote"
 config.dbUserName = process.env.dbUserName || 'smartinstruments';
 
 config.dbPassword = process.env.dbPassword;
@@ -21,7 +21,7 @@ config.remoteSpotifyUsersHostPort = process.env.remoteSpotifyUsersHostPort || '1
 config.spotifyDbName = process.env.spotifyDbName || 'spotify_users';
 config.spotifyDbPassword = process.env.spotifyDbPassword;
 
-config.classifyServerUri = 'https://smart-instruments-class.herokuapp.com/'; // 'http://localhost:9990/';
+config.classifyServerUri = 'http://localhost:9990/'; // 'https://smart-instruments-class.herokuapp.com/'
 config.classifyApiPath = 'classification/';
 config.classifyApiPathRegularFields = 'classification_text_fields/';
 

@@ -22,12 +22,21 @@ function request(method, uri, body) {
 
 function extractFieldsForPrediction(user) {
   return {
+    // Adding new fields
     size_genres: user.genres.length,
     size_equipment: user.equipment.length,
     size_influences: user.influences.length,
     size_instruments: user.instruments.length,
     size_languages: user.languages.length,
     description: user.musicalBackground.descripion || '',
+    freeText: user.freeText,
+    profile: user['profile'],
+    instruments: user.instruments,
+    equipment: user.equipment,
+    influences: user.influences,
+    genres: user.genres,
+    interview: user.interview,
+    languages: user.languages,
   };
 }
 
