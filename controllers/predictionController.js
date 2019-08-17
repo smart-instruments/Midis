@@ -22,6 +22,7 @@ function request(method, uri, body) {
 
 function extractFieldsForPrediction(user) {
   return {
+    // Adding new fields
     size_genres: user.genres.length,
     size_equipment: user.equipment.length,
     size_influences: user.influences.length,
